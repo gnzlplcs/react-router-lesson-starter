@@ -9,14 +9,16 @@ export default function Profile () {
   const loggedIn = useSelector(selectIsLoggedIn);
 
   // call useRouteMatch() to get the url and path
-  
+
   // use loggedIn to return a Redirect
-  
+
   return (
     <main>
       <h1>{currentUser.username}</h1>
       <Link to={"/profile/edit"}>Edit</Link>
-      {/* Render a route for EditProfileForm */}
+      <Route path="/profile/edit">
+        <EditProfileForm />
+      </Route>
     </main>
   )
 }
